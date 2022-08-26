@@ -1,0 +1,34 @@
+.textContainer {
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.imageOverlay {
+    height: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card{
+    width: 300px;
+    margin: 8px;
+}
+.card-img-top{
+    height: 200px;
+    object-fit: cover;
+}
+
+.navbar-brand{
+    font-family: 'Hanalei Fill', cursive;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Hanalei Fill', cursive;
+}
+
+.hanaleiFont {
+    font-family: 'Hanalei Fill';
+}

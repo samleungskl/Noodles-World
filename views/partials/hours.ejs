@@ -1,0 +1,11 @@
+<section class="d-flex flex-column justify-content-center align-items-center my-4">
+    <h1 class="text-center">Hours</h1>
+    <table>
+    <% hours.forEach(function(hour) { %>
+        <tr>
+          <td class="hanaleiFont fs-5"><%= dayOfweekFn.numberToDayOfWeek(hour.day_of_week) %>: </td>
+          <td class="hanaleiFont fs-5"><%= hour.start_time.slice(0,5) %> - <%= hour.end_time.slice(0,5) %></td>
+        </tr>
+    <% }); %>
+    </table>
+  </section>

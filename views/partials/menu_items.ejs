@@ -1,0 +1,18 @@
+<section class=" d-flex flex-column justify-content-center align-items-center my-4">
+  <h1 class="text-center" >Menu</h1>
+    <div class="menuItemContainer d-flex flex-row flex-wrap justify-content-center">
+    <% items.forEach(function(item) { %>
+      <div class="card">
+        <img src="<%= item.item_image_url %>" class="card-img-top" alt="<%= item.item_name %>">
+        <div class="card-body">
+          <h5 class="card-title hanaleiFont fs-5"><%= item.item_name %></h5>
+          <p class="card-text hanaleiFont fs-6"><%= item.item_description %></p>
+          <div class="priceBtnContainer d-flex flex-row justify-content-between">
+          <p class="card-price hanaleiFont fs-5">$<%= item.item_price %></p>
+          <a href="#" class="btn btn-warning hanaleiFont fs-5">Add to Cart</a>
+        </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+  </section>
