@@ -26,4 +26,4 @@ const numberToDayOfWeek = function (number) {
     return (day)
 }
 
-module.exports.numberToDayOfWeek = numberToDayOfWeek;
+module.exports = { numberToDayOfWeek };

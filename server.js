@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const axios = require('axios');
-const dayOfweek = require('./public/scripts/dayOfweek.js');
+const { numberToDayOfWeek } = require('./public/scripts/numberToDayOfWeek.js');
+// const { addToCart } = require('./public/scripts/addToCart.js');
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -19,7 +20,6 @@ function getHours() {
 function getResturants() {
   return axios.get('https://noodles-world-api.herokuapp.com/resturants');
 }
-
 // index page
 app.get('/', function (req, res) {
   Promise.all([getItems(), getHours(), getResturants()])
@@ -31,7 +31,8 @@ app.get('/', function (req, res) {
         items: items.data,
         hours: hours.data,
         resturants: resturants.data,
-        dayOfweekFn: dayOfweek
+        numberToDayOfWeek: numberToDayOfWeek,
+        // addToCart: addToCart,
       });
     })
     .catch(function (error) {
