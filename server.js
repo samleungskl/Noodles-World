@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const { numberToDayOfWeek } = require('./public/scripts/numberToDayOfWeek.js');
-// const { addToCart } = require('./public/scripts/addToCart.js');
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -32,7 +31,6 @@ app.get('/', function (req, res) {
         hours: hours.data,
         resturants: resturants.data,
         numberToDayOfWeek: numberToDayOfWeek,
-        // addToCart: addToCart,
       });
     })
     .catch(function (error) {
@@ -42,8 +40,8 @@ app.get('/', function (req, res) {
 })
 
 // about page
-app.get('/about', function (req, res) {
-  res.render('pages/about');
+app.get('/cart', function (req, res) {
+  res.render('pages/cart');
 });
 
 app.listen(8080);
