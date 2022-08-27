@@ -17,8 +17,8 @@ $(document).ready(function () {
             resultHTML += `<tr>
             <td>${index+1}</td>
             <td>${element.name}</td>
+            <td><a class="deleteFromCartBtn" data-index="${index}">Delete</a></td>
             <td>\$${element.price}</td>
-            <td><button class="deleteFromCartBtn" data-index="${index}">Delete</button></td>
             </tr>`
         });
     
