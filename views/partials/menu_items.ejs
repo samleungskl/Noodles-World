@@ -7,9 +7,9 @@
         <div class="card-body">
           <h5 class="card-title hanaleiFont fs-5"><%= item.item_name %></h5>
           <p class="card-text hanaleiFont fs-6"><%= item.item_description %></p>
-          <div class="priceBtnContainer d-flex flex-row justify-content-between">
-          <p class="card-price hanaleiFont fs-5">$<%= item.item_price %></p>
-          <a href="#" class="btn btn-warning hanaleiFont fs-5">Add to Cart</a>
+          <div class="priceBtnContainer d-flex flex-row justify-content-between align-items-center">
+          <div class="card-price hanaleiFont fs-5">$<%= item.item_price %></div>
+          <button class="addToCartBtn btn btn-warning hanaleiFont fs-5" data-name="<%= item.item_name %>" data-price="<%= item.item_price %>">Add to Cart</button>
         </div>
         </div>
       </div>

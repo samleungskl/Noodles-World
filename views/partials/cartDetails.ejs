@@ -1,0 +1,51 @@
+<section class="d-flex flex-column justify-content-center align-items-center my-4">
+    <div id='cartDetailsSection'>
+        <h1 id='cartPageTitle' class="text-center">Your Cart</h1>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item Name</th>
+                    <th></th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cartDetails">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <th>Subtotal:</th>
+                    <td id="cartSubTotal"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <th>Tax @5%:</th>
+                    <td id="cartSubTotalTax"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <th>Grand Total:</th>
+                    <td id="cartGrandTotal"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <form id='infoForm' style="width:300px">
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" id="customerName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="customerPhoneNumber" pattern="[0-9]{10}" maxlength="10" pattern="\d{10}">
+            </div>
+            <button type="submit" class="placeOrderBtn btn btn-warning hanaleiFont fs-5">Place Order</button>
+        </form>
+    </div>
+    <h2 id="emptyCart"> Your cart is empty.</h2>
+    <a id="returnHomeBtn" class='btn btn-warning' href='/'>Return to Home</a>
+    <h2 id="receivedMessage"></h2>
+</section>
