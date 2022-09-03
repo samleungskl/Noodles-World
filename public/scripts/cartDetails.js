@@ -4,6 +4,7 @@ $(document).ready(function () {
         console.log('localStorage.cart', localStorage.cart)
         if (localStorage.cart) {
             $("#emptyCart").hide();
+            $("#returnHomeBtn").hide();
             const cartData = JSON.parse(localStorage.cart);
 
             let resultHTML = '';
@@ -30,6 +31,7 @@ $(document).ready(function () {
         } else {
             $("#cartDetailsSection").hide();
             $("#emptyCart").show();
+            $("#returnHomeBtn").show();
         }
     }
 
