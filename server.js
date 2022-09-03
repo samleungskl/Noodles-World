@@ -39,9 +39,12 @@ app.get('/', function (req, res) {
     });
 })
 
-// about page
 app.get('/cart', function (req, res) {
   res.render('pages/cart');
+});
+
+app.get('/track', function (req, res) {
+  res.render('pages/track');
 });
 
 app.listen(8080);
