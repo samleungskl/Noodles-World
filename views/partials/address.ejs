@@ -1,8 +1,8 @@
 <section class="my-4">
-<h1 class="text-center" >Address</h1>
+<h1 class="text-center fs-2" >Address</h1>
 <% resturants.forEach(function(resturant) { %>
-  <div class="text-center hanaleiFont fs-5"><%= resturant.resturant_street_address %></div>
-  <div class="text-center hanaleiFont fs-5"><%= resturant.resturant_city_address %> <%= resturant.resturant_postal_code_address %></div>
-  <div class="text-center hanaleiFont fs-5">Phone Number: <%= resturant.resturant_phone_number %></div>
+  <div class="text-center fs-5"><%= resturant.resturant_street_address %></div>
+  <div class="text-center fs-5"><%= resturant.resturant_city_address %> <%= resturant.resturant_postal_code_address %></div>
+  <div class="text-center fs-5">Phone Number: <%= resturant.resturant_phone_number %></div>
 <% }); %>
 </section>
