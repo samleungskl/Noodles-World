@@ -1,18 +1,27 @@
 <section class=" d-flex flex-column justify-content-center align-items-center my-4">
-  <h1 class="text-center" >Menu</h1>
-    <div class="menuItemContainer d-flex flex-row flex-wrap justify-content-center">
+  <h1 class="text-center">Menu</h1>
+  <div class="menuItemContainer d-flex flex-row flex-wrap justify-content-center">
     <% items.forEach(function(item) { %>
       <div class="card">
         <img src="<%= item.item_image_url %>" class="card-img-top" alt="<%= item.item_name %>">
         <div class="card-body">
-          <h5 class="card-title hanaleiFont fs-5"><%= item.item_name %></h5>
-          <p class="card-text hanaleiFont fs-6"><%= item.item_description %></p>
+
           <div class="priceBtnContainer d-flex flex-row justify-content-between align-items-center">
-          <div class="card-price hanaleiFont fs-5">$<%= item.item_price %></div>
-          <button class="addToCartBtn btn btn-warning hanaleiFont fs-5" data-name="<%= item.item_name %>" data-price="<%= item.item_price %>">Add to Cart</button>
-        </div>
+            <div>
+              <h5 class="card-title hanaleiFont fs-5 mb-0 d-flex flex-column">
+                <%= item.item_name %>
+              </h5>
+              <div class="card-price fs-6">$<%= item.item_price %>
+              </div>
+            </div>
+            <button class="addToCartBtn btn btn-warning fs-6 fw-bold" data-name="<%= item.item_name %>"
+              data-price="<%= item.item_price %>">+</button>
+          </div>
+          <p class="card-text fs-6">
+            <%= item.item_description %>
+          </p>
         </div>
       </div>
-    <% }); %>
+      <% }); %>
   </div>
-  </section>
+</section>

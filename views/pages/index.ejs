@@ -9,22 +9,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
-  <header>
+  <header class="sticky-top">
     <%- include('../partials/header'); %>
   </header>
 
   <main>
     <%- include('../partials/hero'); %>
-    <%- include('../partials/order_tracker'); %>
-    <%- include('../partials/menu_items'); %>
-    <%- include('../partials/address'); %>
-    <%- include('../partials/hours'); %>
-    <%- include('../partials/about_us'); %>
+      <%- include('../partials/about_us'); %>
+        <%- include('../partials/menu_items'); %>
+          <%- include('../partials/address'); %>
+            <%- include('../partials/hours'); %>
   </main>
-
-  <footer>
-    <%- include('../partials/footer'); %>
-  </footer>
+  <%- include('../partials/alert'); %>
+    <footer>
+      <%- include('../partials/footer'); %>
+    </footer>
 
 </body>
 

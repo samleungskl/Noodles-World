@@ -47,5 +47,9 @@ app.get('/track', function (req, res) {
   res.render('pages/track');
 });
 
+app.get('*', function (req, res) {
+  res.render('pages/404');
+});
+
 app.listen(8080);
 console.log('Server is listening on port 8080');
